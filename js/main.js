@@ -409,8 +409,8 @@ $(document).ready(function() {
 (() => {
     class Whatsapp {
         constructor({
-            title = "¿Necesitas ayuda?",
-            subtitle = "Chatea con nosotros por Whatsapp",
+            title = "Need help",
+            subtitle = "Chat with us by Whatsapp",
             agents = [],
         }) {
             (this.t = title),
@@ -466,10 +466,10 @@ $(document).ready(function() {
     window.onload = () => {
         new Whatsapp({
             agents: [{
-                name: "Servicio al cliente",
-                phone: "+57 320 2851704",
-                hours: "Disponible 8am - 7pm",
-                cta: "Haz clic para iniciar chat"
+                name: "Customer service",
+                phone: "+230 59040417",
+                hours: "Available 8am - 7pm",
+                cta: "Click to start chat"
             }]
         })
     }
