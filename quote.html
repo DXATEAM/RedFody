@@ -32,53 +32,53 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
 <script>
-$('#bootstrapForm').submit(function (event) {
-    event.preventDefault()
-    var extraData = {}
-    {
-        /* Parsing input date id=679811034 */
-        var dateField = $("#679811034_date").val()
-        var timeField = $("#679811034_time").val()
-        let d = new Date(dateField)
-        if (!isNaN(d.getTime())) {
-            extraData["entry.679811034_year"] = d.getFullYear()
-            extraData["entry.679811034_month"] = d.getMonth() + 1
-            extraData["entry.679811034_day"] = d.getUTCDate()
+    $('#bootstrapForm').submit(function (event) {
+        event.preventDefault()
+        var extraData = {}
+        {
+            /* Parsing input date id=689069513 */
+            var dateField = $("#689069513_date").val()
+            var timeField = $("#689069513_time").val()
+            let d = new Date(dateField)
+            if (!isNaN(d.getTime())) {
+                extraData["entry.689069513_year"] = d.getFullYear()
+                extraData["entry.689069513_month"] = d.getMonth() + 1
+                extraData["entry.689069513_day"] = d.getUTCDate()
+            }
+            if (timeField && timeField.split(':').length >= 2) {
+                let values = timeField.split(':')
+                extraData["entry.689069513_hour"] = values[0]
+                extraData["entry.689069513_minute"] = values[1]
+            }
         }
-        if (timeField && timeField.split(':').length >= 2) {
-            let values = timeField.split(':')
-            extraData["entry.679811034_hour"] = values[0]
-            extraData["entry.679811034_minute"] = values[1]
+        {
+            /* Parsing input date id=92671440 */
+            var dateField = $("#92671440_date").val()
+            var timeField = $("#92671440_time").val()
+            let d = new Date(dateField)
+            if (!isNaN(d.getTime())) {
+                extraData["entry.92671440_year"] = d.getFullYear()
+                extraData["entry.92671440_month"] = d.getMonth() + 1
+                extraData["entry.92671440_day"] = d.getUTCDate()
+            }
+            if (timeField && timeField.split(':').length >= 2) {
+                let values = timeField.split(':')
+                extraData["entry.92671440_hour"] = values[0]
+                extraData["entry.92671440_minute"] = values[1]
+            }
         }
-    }
-    {
-        /* Parsing input date id=1918507925 */
-        var dateField = $("#1918507925_date").val()
-        var timeField = $("#1918507925_time").val()
-        let d = new Date(dateField)
-        if (!isNaN(d.getTime())) {
-            extraData["entry.1918507925_year"] = d.getFullYear()
-            extraData["entry.1918507925_month"] = d.getMonth() + 1
-            extraData["entry.1918507925_day"] = d.getUTCDate()
-        }
-        if (timeField && timeField.split(':').length >= 2) {
-            let values = timeField.split(':')
-            extraData["entry.1918507925_hour"] = values[0]
-            extraData["entry.1918507925_minute"] = values[1]
-        }
-    }
-    $('#bootstrapForm').ajaxSubmit({
-        data: extraData,
-        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-        error: function () {
-            // Submit of form should be successful but JSONP callback will fail because Google Forms
-            // does not support it, so this is handled as a failure.
-            alert('Form Submitted. Thanks.')
-            // You can also redirect the user to a custom thank-you page:
-            // window.location = 'http://www.mydomain.com/thankyoupage.html'
-        }
+        $('#bootstrapForm').ajaxSubmit({
+            data: extraData,
+            dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+            error: function () {
+                // Submit of form should be successful but JSONP callback will fail because Google Forms
+                // does not support it, so this is handled as a failure.
+                alert('Form Submitted. Thanks.')
+                // You can also redirect the user to a custom thank-you page:
+                // window.location = 'http://www.mydomain.com/thankyoupage.html'
+            }
+        })
     })
-})
 </script>
 
 
@@ -145,27 +145,27 @@ $('#bootstrapForm').submit(function (event) {
 			<div class="container">
 
 				<div class="col-lg-8">
-					<form action="https://docs.google.com/forms/d/e/1FAIpQLSckcpAiplC5Pa2maej0vB6v-R0GgqPMPLDO7uLfV4LMXAO5Rw/formResponse"
+					<form action="https://docs.google.com/forms/d/e/1FAIpQLSeOtXdXtvMKdlb8htg8iuETKYBwIdp3uRUyz3RtOU6sm4nTFA/formResponse"
 						  target="_self"
 						  id="bootstrapForm"
 						  method="POST">
 
 
 
-						<!-- Field type: "date" id: "20922589" -->
+						<!-- Field type: "date" id: "803811861" -->
 						<fieldset>
-							<legend for="20922589">Check in </legend>
+							<legend for="803811861">Check in </legend>
 							<div class="form-group">
-								<input type="date" id="679811034_date" name="entry.679811034" placeholder="11/18/2022" class="form-control" required>
+								<input type="date" id="689069513_date" name="entry.689069513" placeholder="11/18/2022" class="form-control" required>
 							</div>
 						</fieldset>
 
 
-						<!-- Field type: "date" id: "1488567430" -->
+						<!-- Field type: "date" id: "10509499" -->
 						<fieldset>
-							<legend for="1488567430">Check out</legend>
+							<legend for="10509499">Check out</legend>
 							<div class="form-group">
-								<input type="date" id="1918507925_date" name="entry.1918507925" placeholder="11/18/2022" class="form-control" required>
+								<input type="date" id="92671440_date" name="entry.92671440" placeholder="11/18/2022" class="form-control" required>
 							</div>
 						</fieldset>
 
@@ -199,50 +199,50 @@ $('#bootstrapForm').submit(function (event) {
 
 						<!-- Field type: "short" id: "1770822543" -->
 						<fieldset>
-							<legend for="1770822543">Number of Adult</legend>
+							<legend for="1770822543">Number of Adults</legend>
 							<div class="form-group">
 								<input id="1166974658" type="text" name="entry.1166974658" class="form-control" required>
 							</div>
 						</fieldset>
 
 
+						<!-- Field type: "short" id: "80529579" -->
+						<fieldset>
+							<legend for="80529579">Number of Children</legend>
+							<div class="form-group">
+								<input id="932764789" type="text" name="entry.932764789" class="form-control">
+							</div>
+						</fieldset>
+
+
+						<!-- Field type: "short" id: "55831953" -->
+						<fieldset>
+							<legend for="55831953">Number of Guest</legend>
+							<div class="form-group">
+								<input id="1074514636" type="text" name="entry.1074514636" class="form-control">
+							</div>
+						</fieldset>
+
+
 						<!-- Field type: "short" id: "1846923513" -->
 						<fieldset>
-							<legend for="1846923513">Number of Children</legend>
+							<legend for="1846923513">occassion</legend>
 							<div class="form-group">
 								<input id="839337160" type="text" name="entry.839337160" class="form-control">
 							</div>
 						</fieldset>
 
 
-						<!-- Field type: "short" id: "1964219571" -->
+						<!-- Field type: "paragraph" id: "1828577673" -->
 						<fieldset>
-							<legend for="1964219571">Number of Guest</legend>
+							<legend for="1828577673">Message</legend>
 							<div class="form-group">
-								<input id="788370425" type="text" name="entry.788370425" class="form-control">
-							</div>
-						</fieldset>
-
-
-						<!-- Field type: "short" id: "817668576" -->
-						<fieldset>
-							<legend for="817668576">Occasion</legend>
-							<div class="form-group">
-								<input id="1653567336" type="text" name="entry.1653567336" class="form-control">
-							</div>
-						</fieldset>
-
-
-						<!-- Field type: "paragraph" id: "1845706688" -->
-						<fieldset>
-							<legend for="1845706688">Message</legend>
-							<div class="form-group">
-								<textarea id="16307014" name="entry.16307014" class="form-control"></textarea>
+								<textarea id="18765950" name="entry.18765950" class="form-control"></textarea>
 							</div>
 						</fieldset>
 
 						<input type="hidden" name="fvv" value="1">
-						<input type="hidden" name="fbzx" value="5311009888222063585">
+						<input type="hidden" name="fbzx" value="9143522486081752723">
 
 						<input type="hidden" name="pageHistory" value="0">
 
