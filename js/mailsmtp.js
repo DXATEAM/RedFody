@@ -11,7 +11,7 @@ btn.addEventListener('click',function(e){
     Email.send({
     Host : "smtp.gmail.com",
     Username : "ankushcoonjul@gmail.com",
-    Password : "ANKUSHCOONJUL@45DJ",
+    Password : "",
     To : 'ankushcoonjul@gmail.com',
     From : email,
     Subject : subject,
