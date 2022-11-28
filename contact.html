@@ -31,7 +31,9 @@
 			<link rel="stylesheet" href="css/style.css">
 		<script>
             $('#bootstrapForm').submit(function (event) {
-                event.preventDefault()
+				event.preventDefault()
+
+           
                 var extraData = {}
                 $('#bootstrapForm').ajaxSubmit({
                     data: extraData,
@@ -44,7 +46,10 @@
                         // window.location = 'http://www.mydomain.com/thankyoupage.html'
                     }
                 })
-            })
+			})
+            function recaptchaCallback() {
+                $('#recaptcha_check_empty').val(1);
+            }
 
 		</script>
 		</head>
@@ -162,13 +167,17 @@
 								<input type="hidden" name="fbzx" value="-3469002787130801362">
 								<input type="hidden" name="pageHistory" value="0">
 
-								<div class="g-recaptcha" data-sitekey="6LeB7DkjAAAAAEd14E8_E2vi-ZV7uUTUMPdVsA_3"></div>
+								<input id='recaptcha_check_empty' required tabindex='-1' ,
+									   style='width:50px; height:0; opacity:0; pointer-events:none;
+position:absolute;
+bottom:0;'>
+								<div class="g-recaptcha" data-sitekey="6LeB7DkjAAAAAEd14E8_E2vi-ZV7uUTUMPdVsA_3" data-callback="recaptchaCallback"></div>
 								<br />
 								<div class="col-lg-12">
 									<div class="alert-msg" style="text-align: left;"></div>
 									<input class="btn btn-primary genric-btn primary circle" type="submit" value="Submit" style="float: right;">
 
-									
+
 								</div>
 							</div>
 						</form>
